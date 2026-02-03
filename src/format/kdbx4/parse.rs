@@ -242,7 +242,7 @@ fn parse_outer_header(data: &[u8]) -> Result<(KDBX4OuterHeader, usize), ParseOut
             }
 
             _ => {
-                return Err(ParseOuterHeaderError::InvalidOuterHeaderEntry { entry_type }.into());
+                return Err(ParseOuterHeaderError::InvalidOuterHeaderEntry { entry_type });
             }
         };
     }
@@ -343,7 +343,7 @@ fn parse_inner_header(
             }
 
             _ => {
-                return Err(ParseInnerHeaderError::InvalidInnerHeaderEntry { entry_type }.into());
+                return Err(ParseInnerHeaderError::InvalidInnerHeaderEntry { entry_type });
             }
         }
     }
